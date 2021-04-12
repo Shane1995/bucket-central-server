@@ -1,0 +1,49 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "DeleteField",
+      "model": "Command",
+      "field": "topicId"
+    },
+    {
+      "tag": "CreateField",
+      "model": "CommandTopic",
+      "field": "topicId",
+      "type": "Int",
+      "arity": "Required"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "CommandTopic",
+      "field": "topicid"
+    },
+    {
+      "tag": "UpdateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "CommandTopic",
+          "field": "topic"
+        },
+        "directive": "relation"
+      },
+      "argument": "fields",
+      "newValue": "[topicId]"
+    },
+    {
+      "tag": "UpdateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Model",
+          "model": "CommandTopic"
+        },
+        "directive": "id"
+      },
+      "argument": "",
+      "newValue": "[cmdId, topicId]"
+    }
+  ]
+}

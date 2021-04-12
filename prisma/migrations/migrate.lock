@@ -1,0 +1,7 @@
+# Prisma Migrate lockfile v1
+
+20201020080723-bucket_central
+20201020082415-bucket_central
+20201020100149-removes-association-tb
+20201020100442-bucket_central
+20201020160424-update-topic-relationship

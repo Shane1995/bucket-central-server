@@ -1,0 +1,79 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "DeleteModel",
+      "model": "CommandTopic"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Command",
+      "field": "topic",
+      "type": "Topic",
+      "arity": "List"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Command",
+      "field": "CommandTopic"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Topic",
+      "field": "Command",
+      "type": "Command",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "Topic",
+          "field": "Command"
+        },
+        "directive": "relation"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Topic",
+          "field": "Command"
+        },
+        "directive": "relation"
+      },
+      "argument": "fields",
+      "value": "[commandId]"
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Topic",
+          "field": "Command"
+        },
+        "directive": "relation"
+      },
+      "argument": "references",
+      "value": "[id]"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Topic",
+      "field": "commandId",
+      "type": "Int",
+      "arity": "Optional"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Topic",
+      "field": "CommandTopic"
+    }
+  ]
+}

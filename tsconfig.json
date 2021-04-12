@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "es2018",
+      "es5",
+      "dom",
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/types/*" : ["./src/types/*"],
+      "*" : ["./src/types/*"]
+    },
+    "typeRoots": [
+      "./src/types"
+    ],
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "target": "ESNext",
+    "strict": true,
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "outDir": "./dist/src",
+    "rootDir": "./src",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "sourceMap": false
+  },
+  "exclude": [
+    "./node_modules/**/*",
+    "./build/**/*"
+  ],
+  "include": [
+    "./src/**/*"
+  ]
+}
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateField",
+      "model": "Category",
+      "field": "topics",
+      "type": "Topic",
+      "arity": "List"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Category",
+      "field": "topic"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Command",
+      "field": "Topic",
+      "arity": "Required"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Command",
+      "field": "topicId",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Topic",
+      "field": "commands",
+      "type": "Command",
+      "arity": "List"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Topic",
+      "field": "command"
+    }
+  ]
+}
